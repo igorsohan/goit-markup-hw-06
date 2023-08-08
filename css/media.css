@@ -1,0 +1,352 @@
+/** -------------------- Mobile -------------------- */
+
+@media screen and (min-width: 428px) {
+  .menu-socials {
+    gap: 56px;
+    justify-content: start;
+  }
+
+  .menu-address-phone {
+    font-size: 36px;
+  }
+}
+
+/** -------------------- Tablet -------------------- */
+
+@media screen and (min-width: 768px) {
+  :root {
+    --container-width: var(--tablet-container-width);
+    --order-service-background-image: url(../images/studio/team-office-tablet.jpg);
+  }
+
+  /*? ------------------------ Header ------------------------ */
+
+  .line {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .header-container {
+    gap: 122px;
+  }
+
+  .navigation {
+    gap: 120px;
+    justify-content: start;
+  }
+
+  /* Header Menu */
+  .header-nav {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-menu-item {
+    color: var(--navyblue);
+    font-weight: 500;
+    padding: 24px 0;
+    display: block;
+    position: relative;
+  }
+
+  .header-menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: var(--ocean);
+    border-radius: 2px;
+    opacity: 0;
+    transition: width var(--transition-time) var(--transition-function),
+      left var(--transition-time) var(--transition-function),
+      opacity var(--transition-time) var(--transition-function);
+  }
+
+  .header-menu-item:not(.current-page):is(:hover, :focus)::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+  }
+
+  .header-menu-item.current-page {
+    color: var(--ocean);
+  }
+
+  .header-menu-item.current-page::after {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+
+  /* Address */
+  .header-address {
+    font-style: normal;
+    display: inline-block;
+  }
+
+  .header-address-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .header-address-item {
+    color: var(--slate);
+    font-size: 12px;
+    display: block;
+  }
+
+  .header-menu-item,
+  .header-address-item {
+    transition: color var(--transition-time) var(--transition-function);
+  }
+
+  .header-menu-item:not(.current-page):is(:hover, :focus),
+  .header-address-item:is(:hover, :focus) {
+    color: var(--ocean);
+  }
+
+  /* Menu */
+  .menu-open-button {
+    display: none;
+  }
+
+  /*? ------------------------ Order Service Section ------------------------ */
+
+  .order-service {
+    max-width: 768px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    :root {
+      --order-service-background-image: url(../images/studio/team-office-tablet-2x.jpg);
+    }
+  }
+
+  .order-service-container {
+    gap: 36px;
+  }
+
+  .order-service-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+  }
+
+  /*? ------------------------ Features Section ------------------------ */
+
+  .features-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .features-item {
+    /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+    width: calc((100% - 24px) / 2);
+  }
+
+  .feature-item-title {
+    text-align: start;
+  }
+
+  /*? ------------------------ Our Team Section ------------------------ */
+
+  .team-container {
+    max-width: 582px;
+  }
+
+  .team-member {
+    /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+    width: calc((100% - 24px) / 2);
+  }
+
+  /*? ------------------------ Customers ------------------------ */
+
+  .customers-container {
+    max-width: 582px;
+  }
+
+  .customers-items {
+    column-gap: 24px;
+  }
+
+  .customer-item {
+    width: calc((100% - 24px * 2) / 3);
+  }
+
+  .customer-icon {
+    width: initial;
+  }
+
+  /*? -------------------- Modal -------------------- */
+
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px;
+  }
+
+  /*? ------------------------ Footer ------------------------ */
+
+  .footer-container {
+    justify-content: start;
+    column-gap: 24px;
+    max-width: 582px;
+  }
+
+  .footer .logo {
+    text-align: start;
+  }
+
+  .footer-description {
+    width: 264px;
+  }
+
+  .footer-socials-title {
+    text-align: start;
+  }
+
+  .subscribe-title {
+    text-align: start;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+  }
+
+  .subscribe-email-input {
+    width: 264px;
+  }
+}
+/** -------------------- Desktop -------------------- */
+
+@media screen and (min-width: 1158px) {
+  :root {
+    --container-width: var(--desktop-container-width);
+    --order-service-background-image: url(../images/studio/team-office.jpg);
+  }
+
+  .section {
+    padding: 120px 0;
+  }
+
+  .container {
+    max-width: var(--container-max-width);
+  }
+
+  /*? ------------------------ Header ------------------------ */
+
+  .navigation {
+    gap: 76px;
+  }
+
+  .header-address-items {
+    gap: 40px;
+  }
+
+  .header-address-item {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  /*? ------------------------ Order Service Section ------------------------ */
+
+  .order-service {
+    padding: 188px 0;
+    max-width: 1440px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    :root {
+      --order-service-background-image: url(../images/studio/team-office-2x.jpg);
+    }
+  }
+
+  .order-service-container {
+    gap: 48px;
+  }
+
+  /*? ------------------------ Features Section ------------------------ */
+
+  .features {
+    padding-bottom: 0;
+  }
+
+  .features-item {
+    /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+    width: calc((100% - 24px * 3) / 4);
+  }
+
+  .feature-icon-container {
+    background-color: var(--cloud);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .feature-item-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  /*? ------------------------ Services Section ------------------------ */
+
+  .services {
+    display: block;
+  }
+
+  .services-items {
+    display: flex;
+    gap: 24px;
+  }
+
+  .services-item {
+    /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+    width: calc((100% - 24px * 2) / 3);
+  }
+
+  /*? ------------------------ Our Team Section ------------------------ */
+
+  .team-member {
+    /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+    width: calc((100% - 24px * 3) / 4);
+  }
+
+  /*? ------------------------ Customers ------------------------ */
+
+  .customer-item {
+    width: calc((100% - 24px * 5) / 6);
+  }
+
+  /*? ------------------------ Footer ------------------------ */
+
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-container {
+    column-gap: 0;
+    flex-wrap: nowrap;
+  }
+
+  .footer-info {
+    margin-right: 120px;
+  }
+
+  /* Subscribe form */
+
+  .subscribe-container {
+    margin-left: 80px;
+  }
+}
