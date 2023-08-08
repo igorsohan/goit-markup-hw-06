@@ -371,7 +371,6 @@ input {
 .order-service-title {
   color: var(--white);
   text-align: center;
-  letter-spacing: 0.02em;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.12;
